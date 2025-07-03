@@ -1,5 +1,5 @@
 # running with docker
-- docker build -t iconic . && docker run -v $PWD/results:/usr/src/app/results iconic
+- `docker build -t iconic . && docker run -v $PWD/results:/usr/src/app/results iconic`
 - Note running distil-bert exeeds 10 mins (~15 mins) using docker on an M1 mac. Faster results can be achieved using  virtual env approach. 
 
 # running in virtual env
