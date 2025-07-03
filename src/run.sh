@@ -3,6 +3,7 @@
 #python ./src/baseline.py --model logistic --emb tfidf
 
 # train custom distil-bert model
+mkdir -p ./src/model_weights 
 EPOCHS=1 # Define number of epochs
 python ./src/model_train.py --epochs $EPOCHS --freeze_bb --output_p "$PWD/src/model_weights"
 
