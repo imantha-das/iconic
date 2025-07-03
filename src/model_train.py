@@ -1,5 +1,5 @@
 # ---------------------------------------------------------------------------- #
-#                       Script to train Distil-BERT model                      #
+#                     Script to finetune Distil-BERT model                     #
 # ---------------------------------------------------------------------------- #
 import argparse 
 import os
@@ -134,6 +134,9 @@ if __name__ == "__main__":
         print(f"train batch loss : {train_loss:.3f}, valid batch loss : {valid_loss:.3f}")
     end = time.time()
     print(f"time taken : {(end - start)/60:.2f}")
+
+    if not os.path.exists(args.output_p):
+        os.mkdir(args.output_p)
 
     # Save model weights for inference 
     print(f"saving weights in {out_file_name}")
